@@ -64,6 +64,8 @@ const handler = (cmdArgs) => {
         const items = dic.getItems();
         consolePrint(items);
         break;
+      default:
+        consolePrint("Unkown command");
     }
   } catch (e) {
     consolePrint(e);

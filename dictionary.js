@@ -26,6 +26,9 @@ class Dictionary {
       const index = this.keys[key].indexOf(member);
       if (index > -1) {
         this.keys[key].splice(index, 1);
+        if (this.keys[key].length === 0) {
+          delete this.keys[key];
+        }
       } else {
         throw new Error("ERROR, member does not exist");
       }
